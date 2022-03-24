@@ -27,6 +27,11 @@ func runApplies(cfg *config.CloudConfig, appliers ...applier) error {
 func RunApply(cfg *config.CloudConfig) error {
 	return runApplies(cfg,
 		ApplyModules,
+		ApplySysctls,
+		ApplyHostname,
+		ApplyDNS,
+		ApplyWifi,
+		ApplyPassword,
 		ApplySSHKeysWithNet,
 		ApplyWriteFiles,
 		ApplyEnvironment,

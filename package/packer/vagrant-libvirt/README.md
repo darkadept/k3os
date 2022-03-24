@@ -1,8 +1,8 @@
-# k3OS on Vagrant
+# k3OS on Vagrant using the libvirt provider
 
 ## Quick Start
 
-1. Build vagrant box image using [Packer](https://www.packer.io/): 
+1. Build vagrant box image for libvirt using [Packer](https://www.packer.io/): 
 
 ```bash
 packer build .
@@ -11,7 +11,7 @@ packer build .
 2. Import vagrant box
 
 ```bash
-vagrant box add --provider virtualbox k3os k3os_virtualbox.box
+vagrant box add --provider libvirt k3os k3os_libvirt.box
 ```
 
 3. Run the Vagrant box:
@@ -25,14 +25,6 @@ Docs](https://www.vagrantup.com/docs/index.html) for more details on how
 to use Vagrant
 
 ## Notes
-
-The generated box does not have the Virtualbox Guest Additions
-installed. Most of the configuration options will not work. this is
-specially true for:
-
-* `config.vm.hostname`
-* `config.vm.synced_folder`
-* `config.vm.network`
 
 The shell provisioner is working but requires some tweaking. The
 provisioning shell script will be put into `/tmp/vagrant-shell`. The
