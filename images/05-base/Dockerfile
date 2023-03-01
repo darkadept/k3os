@@ -11,4 +11,5 @@ RUN apk --no-cache add \
     nano \
     cifs-utils \
     ncdu \
-    pv
+    pv \
+    net-snmp
