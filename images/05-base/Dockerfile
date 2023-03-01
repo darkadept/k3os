@@ -7,4 +7,9 @@ RUN apk --no-cache add \
     open-vm-tools-deploypkg \
     open-vm-tools-guestinfo \
     open-vm-tools-static \
-    open-vm-tools-vmbackup
+    open-vm-tools-vmbackup \
+    nano \
+    cifs-utils \
+    ncdu \
+    pv \
+    net-snmp
